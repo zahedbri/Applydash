@@ -21,6 +21,19 @@
 
     <!-- MAIN CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/${FIREBASE_VERSION}/firebase-functions.js"></script>
+
+    <script>
+        var app = firebase.initializeApp({...
+        });
+        // ...
+    </script>
 
 </head>
 
@@ -358,7 +371,57 @@
 
 
     <script src="js/main.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.0.0/firebase-app.js"></script>
 
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.0.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+
+    <script>
+        var admin = r equire("firebase-admin");
+        var serviceAccount = r equire("path/to/serviceAccountKey.json");
+        admin.initializeApp({
+            credential: admin.credential.cert(serviceAccount),
+            databaseURL: "https://applydash.firebaseio.com"
+        });
+    </script>
+    <script src="https://www.gstatic.com/firebasejs/${JSCORE_VERSION}/firebase.js"></script>
+
+    <script>
+        var app = firebase.initializeApp({
+            apiKey: '<your-api-key>',
+            authDomain: '<your-auth-domain>',
+            databaseURL: '<your-database-url>',
+            projectId: '<your-cloud-firestore-project>',
+            storageBucket: '<your-storage-bucket>',
+            messagingSenderId: '<your-sender-id>'
+        });
+        // ...
+        var firebase = require('firebase/app');
+        require('firebase/auth');
+        require('firebase/database');
+
+        var app = firebase.initializeApp({...
+        });
+        var gcloud = require('google-cloud')({...
+        });
+        var gcs = gcloud.storage();
+        var bucket = gcs.bucket('<your-firebase-storage-bucket>');
+        ...
+    </script>
 </body>
 
 </html>
